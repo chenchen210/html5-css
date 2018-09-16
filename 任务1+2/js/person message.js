@@ -4,7 +4,7 @@ window.onload=function(){
 	var opt=document.getElementsByClassName("opt");
 	email.oninput=function(){
 		for(var i=0;i<arr.length;i++){
-			opt[i].value=email.value+arr[i];
+			opt[i].innerText=email.value+arr[i];
 		}
 	}
 	email.onchange=function(){
