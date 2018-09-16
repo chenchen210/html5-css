@@ -1,0 +1,16 @@
+body{
+	width: 600px;
+	height: 800px;
+	padding-left: 350px;
+}
+fieldset{
+	margin: 10px;
+	line-height: normal;
+}
+#btu-last{
+	margin: 5px;
+	margin-left: 10px;
+}
+legend{
+	color: red;
+}

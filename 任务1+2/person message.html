@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/person message.css"/>
+		<script type="text/javascript" src="js/person message.js"></script>
+		<title>information</title>
+	</head>
+	<body>
+		<form>
+		<h1>请填写个人信息</h1>
+		<fieldset>
+			<legend>基本信息</legend>
+			姓名<input type="text" name="name" required="required" placeholder="请输入姓名"/><font color="#FF0000">*</font>
+			<br />
+			年龄<input type="number" name="age" value="20"/>
+		</fieldset>
+		<fieldset>
+			<legend>你想在哪里收到邮件？</legend>	
+			邮箱<input type="text" required="required" placeholder="请输入邮箱" id="email" list="ema"/>
+			<datalist id="ema">
+				<option class="opt">@qq.com</option>
+				<option class="opt">@163.com</option>
+				<option class="opt">@gmail.com</option>
+				<option class="opt">@yahoo.com</option>
+				<option class="opt">@126.com</option>
+			</datalist>
+			<span><font color="#FF0000">*</font></span>
+		</fieldset>
+		<fieldset>
+			<legend>收入情况</legend>
+			月收入<input type="text" list="income" placeholder="20k+"/>
+				<datalist id="income">
+					<option>10k</option>
+				</datalist>
+			<br />
+			银行卡<input type="number" name="card"/>
+			有效期<input type="date" name="data" />
+		</fieldset>
+		<fieldset>
+			<legend>选取提交文件</legend>
+			文件<input type="file" placeholder="未选取任何文件"/>
+		</fieldset>
+		<button id="btu-last">提交</button>
+		</form>
+	</body>
+</html>

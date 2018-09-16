@@ -1,0 +1,45 @@
+#body{
+	width: 350px;
+	height: 500px;
+	/*padding-left: 250px;*/
+	background-color:aliceblue;
+}
+#first{
+	background-color:beige;
+	height: 40px;
+}
+#second{
+	background-color: antiquewhite;
+	height: 40px;
+}
+#one{
+	width: 175px;
+	height: 40px;
+	background-color:dodgerblue;
+	float: left;
+}
+#two{
+	width: 175px;
+	height: 40px;
+	background-color: blueviolet;
+	float: left;
+}
+#third{
+	font-family: charcoal;
+	text-align: center;
+	line-height: 37px;
+	color: white;
+}
+li{
+	list-style: none;
+}
+li button{
+	background-color: aliceblue;
+	color:darkturquoise;
+	text-decoration: underline;
+	position:absolute;
+	left: 314px;
+}
+#content{
+	display: none;
+}
