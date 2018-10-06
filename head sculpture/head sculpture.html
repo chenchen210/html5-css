@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>head sculpture</title>
+	</head>
+	<script type="text/javascript">
+		function init(){
+			var box=document.getElementById("box");
+			box.addEventListener("dragenter",function(e){
+				e.preventDefault();
+			},false);
+			box.addEventListener("dragover",function(e){
+				e.preventDefault();
+			},false);
+			box.addEventListener("drop", function(e) 
+		    {
+		        e.preventDefault();
+		        var fil=e.dataTransfer.files;
+		        var reader=new FileReader();
+		        reader.readAsDataURL(fil[0]);
+		        reader.onload = function(ev){
+			       box.innerHTML = '<img src="'+this.result+'" alt=""/>'
+			    }
+		    }, false);
+		}
+	</script>
+	<body onload="init()">
+		<p>上传头像</p>
+		<div id="box" style="width: 200px; height: 200px; border: 2px solid grey;">
+			
+		</div>
+	</body>
+</html>
