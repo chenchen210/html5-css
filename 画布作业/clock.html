@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>时钟</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#canvas {
+	            border: 1px solid pink;
+	        }
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		<script type="text/javascript">
+			var canvas=document.getElementById("canvas");
+			var cxt=canvas.getContext('2d');
+			cxt.translate(250,250);
+			cxt.save();
+			function clock(){
+				cxt.clearRect(-250,-250,500,500);
+				cxt.beginPath();
+				cxt.arc(0,0,200,0,2*Math.PI,false);
+				cxt.strokeStyle="darkgreen";
+				cxt.lineWidth=3;
+				cxt.closePath();
+				cxt.stroke();
+				//时钟刻度
+				for(var i=0;i<60;i++){
+					cxt.rotate(6/180*Math.PI);
+					cxt.fillStyle="black";
+					cxt.fillRect(0,175,5,10);
+				}
+				for(var i=1;i<13;i++){
+					cxt.rotate(30/180*Math.PI);
+					cxt.fillStyle="red";
+					cxt.fillRect(0,170,5,15);
+				}
+				for (var n=1;n<13;n++) {
+			        var theta =(n-3)*(Math.PI*2)/12;
+			        var x = 200*0.7*Math.cos(theta);
+			        var y = 200*0.7*Math.sin(theta);
+			        cxt.fillText(n,x,y);
+			   }
+				var time=new Date();
+				var s=time.getSeconds();
+				var m=time.getMinutes();
+				var h=time.getHours();
+				if(h>12){h=h-12;}
+				m=m+s/60;
+				h=h+m/60;
+				//分针
+				cxt.save();
+				cxt.beginPath();
+				cxt.rotate((m-15)*2*Math.PI/60);
+				cxt.fillStyle="hotpink";
+				cxt.fillRect(0,0,125,3);
+				cxt.closePath();
+				cxt.restore();
+				//时针
+				cxt.save();
+				cxt.beginPath();
+			    cxt.rotate((h-9)*2*Math.PI/12);
+				cxt.fillStyle="purple";
+				cxt.fillRect(0,0,-115,4);
+				cxt.restore();
+				//秒针
+				cxt.save()
+				cxt.beginPath();
+				cxt.rotate((s-15)*2*Math.PI/60);
+				cxt.fillStyle="orangered";
+				cxt.fillRect(0,0,135,2);
+				cxt.closePath();
+				cxt.restore();
+				//圆心
+				cxt.beginPath();
+				cxt.arc(0,0,6,0,2*Math.PI);
+				cxt.fillStyle="brown";
+				cxt.fill();
+				cxt.closePath();
+			}
+			cxt.restore();
+			setInterval("clock()",1000);
+		</script>
+	</body>
+</html>
