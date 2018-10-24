@@ -6,6 +6,7 @@ legend{
 		height: 30px;
 		border:1px solid #C0C0C0;
 		float: left;
+		padding: 2px;
 	}
 body{
 	width: 600px;
@@ -16,6 +17,7 @@ body{
 		height: 20px;
 		background-color:#A9A9A9;
 		float: left;
+		/*display: inline-block;*/
 		margin: 4px;
 	}
 #div2{
@@ -23,6 +25,7 @@ body{
 		height: 20px;
 		background-color:#7B68EE;
 		float: left;
+		/*display: inline-block;*/
 		margin: 4px;
 	}
 #div3{
@@ -30,6 +33,7 @@ body{
 		height: 20px;
 		background-color:#FF0000;
 		float: left;
+		/*display: inline-block;*/
 		margin: 4px;
 	}
 #div4{
@@ -37,6 +41,7 @@ body{
 		height: 20px;
 		background-color:#48D1CC;
 		float: left;
+		/*display: inline-block;*/
 		margin: 4px;
 	}
 #div5{
@@ -44,6 +49,7 @@ body{
 		height: 20px;
 		background-color:#F4A460;
 		float: left;
+		/*display: inline-block;*/
 		margin: 4px;
 	}
 #div6{
@@ -51,6 +57,7 @@ body{
 		height: 20px;
 		background-color:#90EE90;
 		float: left;
+		/*display: inline-block;*/
 		margin: 4px;
 	}
 #txt{
